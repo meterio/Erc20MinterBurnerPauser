@@ -55,9 +55,9 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
-    metermain:{
+    metermain: {
       url: 'https://rpc.meter.io',
-      gasPrice: 120*1000000000,
+      gasPrice: 120 * 1000000000,
       chainId: 82,
       accounts: [process.env.MAINNET_CONTRACT_ADMIN_PRIVKEY],
     },
@@ -88,7 +88,7 @@ const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
-        version: "0.6.12",
+        version: "0.8.0",
         settings: {
           optimizer: {
             enabled: true,
