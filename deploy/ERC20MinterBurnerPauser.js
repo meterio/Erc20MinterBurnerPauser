@@ -34,11 +34,8 @@ module.exports = async function ({ ethers: { getNamedSigner }, getNamedAccounts,
     deterministicDeployment: false
   })
 
-  const maker = await ethers.getContract("ERC20MinterBurnerPauser")
-  if (await maker.owner() !== dev) {
-    console.log("Setting maker owner")
-    await (await maker.transferOwnership(dev, true, false)).wait()
-  }
+  const erc20 = await ethers.getContract("ERC20MinterBurnerPauser")
+  console.log(erc20)
 }
 
 module.exports.tags = ["ERC20MinterBurnerPauser"]
